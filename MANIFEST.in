@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include rugby *.css
+recursive-include rugby *.csv
+recursive-include rugby *.html
+recursive-include rugby *.ico
+recursive-include rugby *.js
+recursive-include rugby *.json
+recursive-include rugby *.md
+recursive-include rugby *.png
+recursive-include rugby *.py
+recursive-include rugby *.svg
+recursive-include rugby *.txt
+recursive-exclude rugby *.pyc
