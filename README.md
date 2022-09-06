@@ -2,6 +2,8 @@
 
 Rugby is a frappe framework application for managing SCRUM projects
 
+Scrum is a framework that helps teams work together. Much like a rugby team (where it gets its name) training for the big game, scrum encourages teams to learn through experiences, self-organize while working on a problem, and reflect on their wins and losses to continuously improve.
+
 ### How to Install
 
 1. `bench get-app https://github.com/pjamsheer/rugby.git`

@@ -1,0 +1,172 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{project}-{#####}",
+ "creation": "2022-09-06 19:04:35.307234",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "story",
+  "details_section",
+  "project",
+  "story_type",
+  "column_break_3",
+  "points",
+  "requester",
+  "column_break_6",
+  "status",
+  "owners",
+  "story_description_section",
+  "story_description",
+  "tasks_section",
+  "tasks",
+  "section_break_11",
+  "reviewers",
+  "column_break_13",
+  "blockers"
+ ],
+ "fields": [
+  {
+   "default": "As a I would like to ",
+   "fieldname": "story",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Story",
+   "reqd": 1
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "details_section",
+   "fieldtype": "Section Break",
+   "label": "Details"
+  },
+  {
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Project",
+   "options": "Project",
+   "reqd": 1
+  },
+  {
+   "fieldname": "story_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Story Type",
+   "options": "\nFeature\nBug\nChore\nRelease"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.story_type == 'Feature'",
+   "fieldname": "points",
+   "fieldtype": "Select",
+   "label": "Points",
+   "options": "\n0\n1\n2\n4\n8"
+  },
+  {
+   "fieldname": "requester",
+   "fieldtype": "Link",
+   "label": "Requester",
+   "options": "User"
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "Un Started\nStarted\nFinished\nDelivered\nAccepted\nRejected"
+  },
+  {
+   "fieldname": "owners",
+   "fieldtype": "Table MultiSelect",
+   "label": "Owners",
+   "options": "Story User"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "story_description_section",
+   "fieldtype": "Section Break",
+   "label": "Story Description"
+  },
+  {
+   "fieldname": "story_description",
+   "fieldtype": "Text Editor"
+  },
+  {
+   "fieldname": "tasks_section",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "tasks",
+   "fieldtype": "Table",
+   "label": "Tasks",
+   "options": "Story Task"
+  },
+  {
+   "fieldname": "section_break_11",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "reviewers",
+   "fieldtype": "Table MultiSelect",
+   "label": "Reviewers",
+   "options": "Story User"
+  },
+  {
+   "fieldname": "column_break_13",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "blockers",
+   "fieldtype": "Table MultiSelect",
+   "label": "Blockers",
+   "options": "Story User"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-09-06 19:04:35.307234",
+ "modified_by": "Administrator",
+ "module": "Scrum",
+ "name": "Story",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Scrum Master",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

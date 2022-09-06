@@ -1,0 +1,137 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2022-09-06 19:01:43.239097",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "project",
+  "column_break_3",
+  "start_date",
+  "sprint_details_section",
+  "daily_standup_on",
+  "sprint_duration",
+  "sprint_planning_month_number",
+  "sprint_planning_week_number",
+  "sprint_planning_day",
+  "sprint_planning_on",
+  "sprint_review_day",
+  "sprint_review_on",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "SCRUM-.YYYY.-.####"
+  },
+  {
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "label": "Project",
+   "options": "Project"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Start Date"
+  },
+  {
+   "fieldname": "sprint_details_section",
+   "fieldtype": "Section Break",
+   "label": "Sprint Details"
+  },
+  {
+   "fieldname": "daily_standup_on",
+   "fieldtype": "Time",
+   "label": "Daily Standup On"
+  },
+  {
+   "default": "Week",
+   "fieldname": "sprint_duration",
+   "fieldtype": "Select",
+   "label": "Sprint Duration",
+   "options": "Day\nWeek\nBiweek\nMonth\nBi Month\nQuarter Year\nHalf Year\nYear"
+  },
+  {
+   "default": "1",
+   "depends_on": "eval:in_list(['Bi Month', 'Quarter Year', 'Half Year', 'Year'],doc.sprint_duration)",
+   "fieldname": "sprint_planning_month_number",
+   "fieldtype": "Select",
+   "label": "Sprint Planning Month Number",
+   "options": "\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12"
+  },
+  {
+   "depends_on": "eval:!in_list(['Day', 'Week'],doc.sprint_duration)",
+   "fieldname": "sprint_planning_week_number",
+   "fieldtype": "Select",
+   "label": "Sprint Planning Week Number",
+   "options": "\n1\n2\n3\n4"
+  },
+  {
+   "fieldname": "sprint_planning_day",
+   "fieldtype": "Select",
+   "label": "Sprint Planning Day",
+   "options": "\nMonday\nTuesday\nWednesday\nThursday\nFriday\nSaturday\nSunday"
+  },
+  {
+   "fieldname": "sprint_planning_on",
+   "fieldtype": "Time",
+   "label": "Sprint Planning On",
+   "options": "\nMonday\nTuesday\nWednesday\nThursday\nFriday\nSaturday\nSunday"
+  },
+  {
+   "depends_on": "eval:doc.sprint_duration != 'Day'",
+   "fieldname": "sprint_review_day",
+   "fieldtype": "Select",
+   "label": "Sprint Review Day",
+   "options": "\nMonday\nTuesday\nWednesday\nThursday\nFriday\nSaturday\nSunday"
+  },
+  {
+   "fieldname": "sprint_review_on",
+   "fieldtype": "Time",
+   "label": "Sprint Review On"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Scrum",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2022-09-06 19:01:43.239097",
+ "modified_by": "Administrator",
+ "module": "Scrum",
+ "name": "Scrum",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}
