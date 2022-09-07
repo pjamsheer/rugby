@@ -8,8 +8,8 @@ Scrum is a framework that helps teams work together. Much like a rugby team (whe
 
 1. `bench get-app https://github.com/pjamsheer/rugby.git`
 2. `bench setup requirements`
-3. `bench build --app eventi`
-4. `bench --site [your.site.name] install-app eventi`
+3. `bench build --app rugby`
+4. `bench --site [your.site.name] install-app rugby`
 5. `bench --site [your.site.name] migrate`
 
 ---
